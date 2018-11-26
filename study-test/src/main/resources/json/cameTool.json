@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "t": 1543213169806,
+  "result": [
+    {
+      "devId": "6cf3f596682df0fc512rnk",
+      "phase": 2,
+      "uid": "ay1523855071346NGc0j",
+      "phone": "",
+      "effectiveTime": 1543200559,
+      "tyNumber": 2,
+      "name": "222222",
+      "id": 201005,
+      "invalidTime": 1543286959,
+      "oneTime": 0,
+      "deliveryStatus": 2,
+      "status": true
+    }
+  ]
+}
