@@ -8,14 +8,15 @@ import org.apache.commons.io.IOUtils;
 import com.wcs.study.test.utils.CameToolUtil;
 
 /**
- * utils包的mainlei
+ * utils包的main类
  *
  * @author pro
  */
 public class UtilsMain {
 
     public static void cameToolUtilTest() {
-        InputStream stream = UtilsMain.class.getClassLoader().getResourceAsStream("json/cameTool.json");
+        InputStream stream = UtilsMain.class.getClassLoader()
+                .getResourceAsStream("json/cameTool.json");
 
         String data = null;
         try {

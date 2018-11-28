@@ -12,6 +12,8 @@
     <artifactId>study-test</artifactId>
 
 
+
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
