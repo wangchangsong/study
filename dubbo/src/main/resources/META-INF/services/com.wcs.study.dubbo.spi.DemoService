@@ -1,0 +1,2 @@
+com.wcs.study.dubbo.spi.impl.ChineseDemoService
+com.wcs.study.dubbo.spi.impl.EnglishDemoService

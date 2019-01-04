@@ -11,12 +11,12 @@
     <modules>
         <module>study-test</module>
         <module>study-start</module>
-        <module>study-oauth</module>
         <module>study-core</module>
         <module>study-common</module>
         <module>study-biz</module>
         <module>study-service</module>
         <module>study-client</module>
+        <module>dubbo</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -40,11 +40,11 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.1.0.RELEASE</version>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<version>2.1.0.RELEASE</version>-->
+            <!--</plugin>-->
             <!--kotlin 插件-->
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
