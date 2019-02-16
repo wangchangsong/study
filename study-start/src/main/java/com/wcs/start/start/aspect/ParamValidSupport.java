@@ -1,18 +1,22 @@
 package com.wcs.start.start.aspect;
 
-import com.wcs.start.start.annotation.ParameterValid;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.NotFoundException;
+import java.lang.annotation.Annotation;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import java.lang.annotation.Annotation;
-import java.util.ArrayList;
-import java.util.List;
+import com.wcs.start.start.annotation.ParameterValid;
+
+import javassist.ClassClassPath;
+import javassist.ClassPath;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
+import javassist.NotFoundException;
 
 /**
  * TODO 类描述
@@ -56,7 +60,7 @@ public class ParamValidSupport {
      * 校验
      */
     public List<String> validate(String className, String methodName,
-            Class<?> annotationClass, Object[] args)
+            Class<?> annotationClass, Object[] args, Class<?> clazz)
             throws ClassNotFoundException, NotFoundException {
 
         if (StringUtils.isBlank(className)) {
@@ -70,6 +74,8 @@ public class ParamValidSupport {
         }
 
         ClassPool pool = ClassPool.getDefault();
+        ClassPath classPath = new ClassClassPath(clazz);
+        pool.insertClassPath(classPath);
         CtClass ct = pool.get(className);
         CtMethod ctMethod = ct.getDeclaredMethod(methodName);
         Object[][] parameterAnnotations = ctMethod.getParameterAnnotations();

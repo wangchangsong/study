@@ -17,6 +17,7 @@
         <module>study-service</module>
         <module>study-client</module>
         <module>dubbo</module>
+        <module>study-demo</module>
     </modules>
     <packaging>pom</packaging>
 
